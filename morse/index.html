@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>密码学课堂-首页</title>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+</head>
+<body>
+  <!-- nav部分 -->
+  <div class="nav index">
+    <div class="layui-container">
+      <!-- 公司logo -->
+      <div class="nav-logo" style=font-size:30px>
+        <a href="index.html">
+          <!-- <img src="../res/static/img/logo.png" alt="密码学课堂">   -->
+          <span class="logo-span"><h1>摩斯密码</h1></span>        
+        </a>
+      </div>
+      <div class="nav-list">
+        <button>
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="layui-nav" lay-filter="">
+          <li class="layui-nav-item"><a href="../M/index.html">摩斯密码简介</a></li>
+          <li class="layui-nav-item"><a href="../morse%20tele/morse%20telegraph.html" target="_self">摩斯电报机</a></li>
+          <li class="layui-nav-item"><a href="https://play-morse.lowreal.net/">摩斯音频表</a></li>
+          <li class="layui-nav-item"><a href="../mosecode-converter/index.html" target="_self">摩斯翻译器</a></li>
+          
+        </ul>
+		
+      </div>
+    </div>
+  </div>
+  <img src="../morse/bg.jpg" width="1500" height="700" />
+<script src="../res/layui/layui.js"></script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+  layui.config({
+    base: '../res/static/js/' 
+  }).use('firm'); 
+</script>
+</body>
+</html>

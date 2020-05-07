@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AES </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper container-fluid"><br/>
+  <h1 style="text-align: center;"> AES </h1><br/>
+  <div class="sidebaritems col-md-12" id="content">
+    <div class="col-md-4">
+      <h5>Key size</h5>
+      <select class="form-control" id="selKeySize" name="selKeySize" onchange="selKeySizeChange(this.value)">
+        <option selected="selected" value="128">128</option>
+        <option value="192">192</option>
+        <option value="256">256</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <h5>Mode</h5>
+      <select class="form-control" id="selMode" name="selMode" onchange="selBlockChange(this.value)">
+        <option selected="selected" value="OFB">OFB</option>
+        <option value="CBC">CBC</option>
+        <option value="CFB">CFB</option>
+        <option value="CTR">CTR</option>
+        <option value="ECB">ECB</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <h5>Padding</h5>
+      <select class="form-control" id="selPad" name="selPad" onchange="selPadChange(this.value)">
+        <option selected="selected" value="iso7816">iso7816</option>
+        <option value="ansix923">ansix923</option>
+        <option value="iso10126">iso10126</option>
+        <option value="pkcs7">pkcs7</option>
+        <option value="ZeroPadding">ZeroPadding</option>
+        <option value="NoPadding">NoPadding</option>
+      </select><br/>
+    </div>
+    <div class="col-md-4">
+      <h5>IV</h5>
+      <input class="btn-block" value="random" name="random" onclick="genIv()" type="button"/>
+      <input class="tbnt btn-block" id="iv" name="iv" value="" type="text" size="45" maxlength="64"/><br/>
+    </div>
+    <div class="col-md-4">
+      <h5>Salt</h5>
+      <input class="btn-block" value="random" name="random" onclick="genSalt()" type="button"/>
+      <input class="tbnt btn-block" id="salt" name="salt" value="" type="text" size="45" maxlength="64"/><br/>
+    </div>
+    <div class="col-md-4">
+      <h5>Passphrase</h5>
+      <input class="btn-block" value="random" name="random" onclick="genPassphrase()" type="button"/>
+      <input class="tbnt btn-block" id="passphrase" name="passphrase" value="" type="text" size="70" maxlength="128"/><br/>
+    </div>
+  </div>
+  <div class="space2">
+    <h5>Plaintext</h5>
+    <textarea class="sidebartextarea center-block" id="txtPlaintext" onkeyup="Contar('txtPlaintext','lenPlaintext','{CHAR}',4);" rows="3" cols="30" name="txtPlaintext" onfocus="if(this.value == _text) this.value = '';" onblur="if(this.value == '') this.value = _text"></textarea>
+  </div>
+  <p>count</p>
+  <div id="lenPlaintext">61</div>
+  <div class="bntRight">
+    <input class="mybnt btn-block" id="cmdEncrypt" value="Encrypt" name="cmdEncrypt" onclick="cmdEncryptClick()" type="button"/>
+  </div>
+  <div class="space">
+    <h5>Ciphertext</h5>
+    <textarea class="sidebartextarea center-block" id="txtCiphertext" rows="3" cols="30" name="txtCiphertext"></textarea>
+    <div style="text-align:right;">
+      <input class="mybnt btn-block" id="cmdVerify" value="Decrypt" name="cmdVerify" onclick="cmdVerifyClick()" type="button"/>
+    </div>
+  </div>
+  <div class="space">
+    <h5>Verification</h5>
+    <textarea class="sidebartextarea center-block" id="txtVerification" rows="3" cols="30" name="txtVerification" readonly=""></textarea>
+  </div><br/>
+  <div class="space">
+    <h5>Messages</h5>
+    <textarea class="sidebartextarea center-block" id="txtMessages" rows="2" cols="30" name="txtMessages" readonly=""></textarea>
+  </div><br/>
+  <div class="col-md-6">
+    <input class="btn-block" value="Details" name="cmdDetails" onclick="showDetails();" type="button" title="Details of encrypt/decrypt"/>
+  </div>
+  <div class="col-md-6">
+    <input class="btn-block" value="Reset" name="cmdResetKey" onclick="cmdResetFormClick()" type="reset"/>
+  </div>
+  <div id="logf" style="display: none;">
+    <div id="lenc"></div>
+    <div id="ldec"></div>
+  </div>
+</div><br/>
+<div class="container">
+  <h5>About</h5>
+  <ul>
+    <li>ECB（电子密码簿）适用于随机数据，例如加密其他密钥。由于数据短而随机，因此ECB的缺点具有良好的负面影响。</li>
+    <li>CBC（密码块链接）特别适合加密文件，其中安全性比ECB大大提高。</li>
+    <li>CFB（密码反馈）是加密字节流的最佳方式，其中必须对单个字节进行加密。</li>
+    <li>OFB（8位输出反馈）与CFB相当，但是可以用于不能容忍错误传播的应用中。这是不安全的（因为它在8位模式下运行），因此不建议使用它。</li>
+    <li>
+      点击率是计数器模式。NTR在2001年SP 800-38A中对CTR模式进行了标准化。点阅率模式使用计数器而不是传统的IV。计数器具有其他属性，包括随机数和初始计数器块。该模式不需要将纯文本填充到密码的块大小。
+    </li>
+  </ul>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdn.rawgit.com/angeal185/js-scripts/29f45206/encryption/util.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>RSA</title>
+		<style>
+			body{
+				background-color:lightcyan ;
+			}
+			h1{
+				font-size: 36px;
+				text-align: center;
+			}
+			
+			#message{
+				display: none;
+				position:relative;
+				float: left;
+				animation:move 8s /* infinite */ forwards;
+			}
+			#message2{
+				display: none;
+				position:relative;
+				float: left;
+			}
+			#Alice{
+				float: left;
+				margin-right: 45%;
+				margin-left: 20%;
+				
+			}
+			@keyframes move{
+				from{
+					left:170px;
+				}to{
+					left:790px;
+					
+				}
+			}
+			
+			#rsa{
+				margin-top: 2%;
+			}
+			#key{
+				float:right;
+			}
+			#sk{
+				display: none;
+				color: red;
+				
+			}
+			/* #pk{
+				display: none;
+			} */
+			#number{
+				float: left;
+			}
+			#text{
+				float: left;
+				margin-left: 10%;
+				margin-top: 10%;
+			}
+			#Bob{
+				float: left;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1>RSA</h1>
+		<div>
+			<div id="number">
+				  <span>Check Prime Number</span>
+				  <input type="text" class="form-control" id="primeToCheck" placeholder="Prime">
+				  <button id="checkPrime" type="submit" class="btn btn-default">Check</button>
+				  <strong id="isPrime"></strong>
+				<br />
+				<span>Step 1:</span>
+				<form class="form-inline">
+				  <span>Multiply Primes</span>
+					<input type="text" class="form-control" id="prime1" placeholder="Prime 1">
+					<label for="prime2">x</label>
+					<input type="text" class="form-control" id="prime2" placeholder="Prime 2">
+				  <button id="multiplyPrimes" type="submit" class="btn btn-default">Multiply</button>
+				</form>
+				<form class="form-inline">
+				  (Public) n:&emsp;
+				  Prime1 x Prime 2=
+				  <strong id="primeTotal">0</strong>
+				</form>
+			
+				<form class="form-inline">
+				  (Private) Phi n:&emsp;
+				  (Prime1 - 1) x (Prime2 - 1)=
+				  <strong id="phiPrimes">0</strong>
+				</form>
+			
+				<form class="form-inline">
+				  (Public) Key e:&emsp;
+				  <strong id="keyE">0</strong>&emsp;&emsp;(Low odd number that is not a factor of Phi n)
+				</form>
+			
+				<form class="form-inline">
+				  (Private) Key d:&emsp;
+				 (2 * (Phi (n)) + 1) / key e=
+				  <strong id="keyD">0</strong>
+				</form>
+				<button id="send"> Send message</button>&emsp;<button id="dec"> Decrypt</button>
+			</div>
+			<div id="text">
+				public key is {n,e} <br/>
+				private key is {n,d}
+			</div>
+			
+		</div>
+		
+		<!-- <span id="pk">{n,e}</span> -->
+		
+		<div id="rsa">
+			
+			<div id="Alice">
+				<img src="img/Alice.jpg" width="100px" height="135px"/>
+				<p id="message"><img src="img/message1.png" width="70px" height="45px"/></p>
+				
+			</div>
+				
+				
+			<div id="Bob">
+				<span id="sk">{n,d}</span>
+				<p id="message2"><img src="img/message2.jpg" width="70px" height="55px"></p>
+				<img src="img/Bob.jpg" width="100px" height="100px"/>
+			</div>
+			
+		</div>
+		
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#send').click(function(e) {
+				$('#message2').css('display','none');
+				$('#message').css('display','block');
+				
+			});
+			$('#dec').click(function(e) {
+				$('#message').css('display','none');
+				$('#message2').css('display','block');
+			});
+		});
+		
+	</script>
+	</body>
+</html>

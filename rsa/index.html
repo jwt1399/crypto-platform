@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RSA</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<html>
+  <head>
+    <title>RSA</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1><u>RSA 加密</u></h1>
+      <form class="form-inline">
+        <h3>Check Prime Number</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" id="primeToCheck" placeholder="Prime">
+        </div>
+        <button id="checkPrime" type="submit" class="btn btn-default">Check</button>
+        <strong id="isPrime"></strong>
+      </form>
+      <hr>
+
+      <h2><u>步骤1</u></h2>
+      <form class="form-inline">
+        <h3>质数相乘</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" id="prime1" placeholder="Prime 1">
+        </div>
+        <div class="form-group">
+          <label for="prime2">x</label>
+          <input type="text" class="form-control" id="prime2" placeholder="Prime 2">
+        </div>
+        <button id="multiplyPrimes" type="submit" class="btn btn-default">Multiply</button>
+      </form>
+      <hr>
+      <form class="form-inline">
+        <h3>公钥:n</h3>
+        <div>Prime1 x Prime 2</div>
+        <strong id="primeTotal">0</strong>
+      </form>
+      <hr>
+      <form class="form-inline">
+        <h3>φ(n)</h3>
+        <div>(Prime1 - 1) x (Prime2 - 1)</div>
+        <strong id="phiPrimes">0</strong>
+      </form>
+      <hr>
+      <form class="form-inline">
+        <h3>公钥：e</h3>
+        <div>Low odd number that is not a factor of Phi n</div>
+        <strong id="keyE">0</strong>
+      </form>
+      <hr>
+      <form class="form-inline">
+        <h3>私钥：d</h3>
+		 <div>e*d ≡ 1（mod φ(n)）</div>
+        <div>(2 * (φ(n)) + 1) /e</div>
+        <strong id="keyD">0</strong>
+      </form>
+
+      <hr>     
+      <h2><u>Step 2</u></h2>
+      <form class="form-inline">
+        <h3>明文</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" id="message" placeholder="Message">
+        </div>
+        <button id="encrypt" type="submit" class="btn btn-default">Encrypt</button>
+      </form>
+
+      <hr>
+      <form class="form-inline">
+        <h3>Message As Numbers</h3>
+        <strong id="messageNums"> </strong>
+      </form>
+
+      <hr>
+      <form class="form-inline">
+        <h3>Perform Calculation</h3>
+        <div>(Message As Numbers) <sup>Key e</sup> mod (Phi n)</div>
+        <strong id="messageNums"> </strong>
+      </form>
+
+      <hr>
+      <form class="form-inline">
+        <h3>(Encrypted Message) C</h3>
+        <strong id="encC"> </strong>
+      </form>
+      <hr>
+      <h2><u>Step 3</u></h2>
+	   <iframe height=500 width=1200 src='http://open.163.com/newview/movie/free?pid=M99VIFJA6&mid=M9EDSHM1C&rel=0&amp;autoplay=1' frameborder=0 'allowfullscreen'></iframe>
+    </div>
+  </body>
+ 
+</html>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+
+
+
+

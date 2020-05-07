@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Morse code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <meta charset="UTF-8">
+  <title>div布局</title>
+  <style type="text/css">
+    body {
+      margin: 0px;
+      /*去除边框*/
+	  
+    }
+
+    #lala {
+      width: 100%;
+      height: 800px; 
+	  background-image: url("bg.jpg");
+    }
+
+    #heading {
+      width: 100%;
+      height: 20%;
+      background-image: url("bg.jpg");
+	  
+    }
+
+    #content_menu {
+      width: 20%;
+      height: 80%;
+      background-image: url("bg.jpg");
+	  
+      float: left;
+      /*从左向右排列*/
+    }
+
+    #content_body {
+      width: 80%;
+      height: 80%;
+	  background-image: url("bg.jpg");
+      float: left;
+      /*从左向右排列*/
+    }
+
+    h1 {
+     
+	  
+    }
+  </style>
+
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./morse telegraph.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+
+<body background="bg.jpg">
+
+  <div id="lala">
+    <div id="heading">
+      <h1>摩尔斯电码（英语：Morse code）</h1>
+      <h3> 是一种时通时断的信号代码，通过不同的排列顺序来表达不同的英文字母、數字和标点符号。是由美國人艾爾菲德·維爾(Alfred Lewis Vail)與萨缪尔·摩尔斯(Samuel
+        Finley Breese Morse)在1836年发明。</h3>
+
+    </div>
+
+    <div id="content_menu">
+      <h1>
+        摩尔斯电报机
+      </h1>
+      <br><br><br><br>
+      <div class="telegraph animated fadeInDown">
+        <div class="telegraph__tapper" title="Tap me!"></div>
+      </div>
+      <div class="headline">
+
+        <h4>
+          点击敲击器(或按空格键),开始发出滴滴声！
+        </h4>
+
+      </div>
+      <div class="morse-code-output"></div>
+      <!-- partial -->
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="./morse telegraph.js"></script>
+
+    </div>
+    
+    
+    <div id="content_body">
+      <h1>摩斯音频密码表（点击字母）<br></h1>
+      <div class="container">
+        <div class="letter">A</div>
+        <div class="letter">B</div>
+        <div class="letter">C</div>
+        <div class="letter">D</div>
+        <div class="letter">E</div>
+        <div class="letter">F</div>
+        <div class="letter">G</div>
+        <div class="letter">H</div>
+        <div class="letter">I</div>
+        <div class="letter">J</div>
+        <div class="letter">K</div>
+        <div class="letter">L</div>
+        <div class="letter">M</div>
+        <div class="letter">N</div>
+        <div class="letter">O</div>
+        <div class="letter">P</div>
+        <div class="letter">Q</div>
+        <div class="letter">R</div>
+        <div class="letter">S</div>
+        <div class="letter">T</div>
+        <div class="letter">U</div>
+        <div class="letter">V</div>
+        <div class="letter">W</div>
+        <div class="letter">X</div>
+        <div class="letter">Y</div>
+        <div class="letter">Z</div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

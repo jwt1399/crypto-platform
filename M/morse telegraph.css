@@ -1,0 +1,135 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+body {
+  background: #ecf0f1;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.headline {
+  margin-top: 50px;
+  line-height: 0.8;
+  color: #2c3e50;
+}
+/* Telegraph */
+.telegraph {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 200px;
+  background: #e67e22;
+  box-shadow: 0 18px 0 0 #d26f18;
+  border-bottom: 1px solid #c96a17;
+  border-radius: 0 0 4px 4px;
+}
+.telegraph .telegraph__tapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #34495e;
+  box-shadow: 0 4px 0 0 #2b3c4e, inset 0 15px 0 0 #253544;
+  z-index: 10;
+}
+.telegraph .telegraph__tapper:hover {
+  background: #304457;
+}
+.telegraph .telegraph__tapper:active {
+  margin-bottom: -2px;
+}
+.telegraph:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 22px;
+  height: 100px;
+  background: #34495e;
+}
+.telegraph:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 35px;
+  height: 65px;
+  background: #34495e;
+  box-shadow: 0 8px 0 0 #2b3c4e;
+  border-radius: 0 0 4px 4px;
+}
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}

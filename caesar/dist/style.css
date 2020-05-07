@@ -1,0 +1,125 @@
+body {
+  background: #cdcdcd;
+  width: 100%;
+}
+
+#ciphertext,
+#plaintext {
+  font-family: courier;
+  color: #fff;
+  font-size: 20px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px 0 10px;
+  background: #54bac6;
+  border: 2px solid #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  background: #00bcd4;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h5 {
+  border-radius: 10px 10px 0 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+a {
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  background: #000;
+}
+
+a:hover {
+  color: #000;
+  background: #fff;
+}
+
+#pretty {
+  padding: 20px;
+}
+
+input {
+  color: #000;
+  background: #cdcdcd;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+input:active {
+  border: none;
+}
+
+button {
+  padding: 5px;
+  background: #54bac6;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #000;
+  margin-left: -10px;
+}
+
+p {
+  color: #000;
+  background: #fff;
+  padding: 10px;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+}
+
+#messageArea {
+  text-align: center;
+  width: 100%;
+  font-family: courier;
+}
+
+#footer {
+  color: #fff;
+  background: #00bcd4;
+  min-width: 100%;
+  min-height: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+#outputResult,
+#outputCipher {
+  margin: 0;
+  padding: 0;
+  background: #cdcdcd;
+}
+
+p#outputResult,
+p#outputCipher {
+  background: #00bcd4;
+  color: #fff;
+  font-size: 20px;
+}
+
+#outputCipher {
+  margin-bottom: 10px;
+  border-top: 1px solid #fff;
+}
+
+*:focus {
+  outline: none;
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<title>西华大学 密码学训练平台</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary"><!--导航栏-->
+		<a class="navbar-brand" href="#">西华大学 密码学训练平台</a>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">主页</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="problems.html">题目</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="rank.html">排行榜</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="record.html">提交记录</a>
+				</li>
+			</ul>
+		</div>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<a href="login.html">你还没有登录</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10"><!--公告板，用户的切题数据-->
+				<br/>
+				<div class="alert alert-secondary">
+					<h2>公告栏</h2><!--定期更新，不超过5条，这样我就可以偷懒不用做翻页（逃-->
+					<ul>
+						<li>
+							<a href="#">新上一道摩斯密码题</a>
+						</li>
+						<li>
+							<a href="#">大家加油啊！</a>
+						</li>
+						<li>
+							<a href="#">RSA题已经上线</a>
+						</li>
+						<li>
+							<a href="#">这里是公告4</a>
+						</li>
+						<li>
+							<a href="#">这里是公告5</a>
+						</li>
+					</ul>
+				</div>
+				<div class="alert alert-light">
+					<h2>欢迎来到密码学挑战！</h2>
+					<p>当前积分：0</p>
+					<p>当前排名：0</p>
+					<p>正确率：0%</p>
+					<div style="width: 40%">
+						<canvas id="skills"></canvas>
+						<script type="text/javascript">
+							var canv = $("#skills").get(0).getContext("2d");
+							var crt = new Chart(canv, {
+								type:"radar",
+								data:{
+									labels:["摩斯密码", "凯撒密码", "栅栏密码", "RSA", "DES", "AES"],
+									datasets:[{
+										label: "技能",
+										data: [1, 2, 3, 3, 2, 1]
+									}]
+								},
+								options:{
+									scale:{
+										ticks:{
+											beginAtZero: true,
+											display: false,
+											maxTicksLimit: undefined
+										}
+									}
+								}
+							});
+						</script>
+					</div>
+					
+					<br/>
+					<a href="#">进入用户中心</a>
+				</div>
+			</div>
+			<nav class="col-md-1 navbar-dark navbar-expand-lg">
+				<ul class="nav nav-tabs nav-stacked">
+					<li>
+						<h4>最新题目</h4>
+					</li>
+					<li>
+						<a class="nav-link" href="detail.html">题目1</a>
+					</li>
+					<li>
+						<a class="nav-link" href="detail.html">题目2</a>
+					</li>
+					<li>
+						<a class="nav-link" href="detail.html">题目3</a>
+					</li>
+					<li>
+						<a class="nav-link" href="detail.html">题目4</a>
+					</li>
+					<li>
+						<a class="nav-link" href="detail.html">题目5</a>
+					</li>
+				</ul>
+				<ul class="nav nav-tabs nav-stacked">
+					<li>
+						<h4>排行榜Top5</h4>
+					</li>
+					<li>
+						<p class="nav-link">用户1</p>
+					</li>
+					<li>
+						<p class="nav-link">用户2</p>
+					</li>
+					<li>
+						<p class="nav-link">用户3</p>
+					</li>
+					<li>
+						<p class="nav-link">用户4</p>
+					</li>
+					<li>
+						<p class="nav-link">用户5</p>
+					</li>
+				</ul>
+				<ul class="nav nav-tabs nav-stacked"><!--侧栏-->
+					<li>
+						<h4>其他链接</h4>
+					</li>
+					<li>
+						<a class="nav-link" href="https://jwt1399.top">Blog</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

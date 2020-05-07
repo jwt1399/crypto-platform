@@ -1,0 +1,45 @@
+body {
+  background-color:#ADD8E6
+}
+
+h1 {
+  text-align:center;
+  color:green;  
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+table, td,  th {
+    border: 1px solid black;   
+    background-color: white;
+    border-style:solid;
+    border-collapse: collapse;
+    border-color: grey;
+}
+
+table th {
+  background-color: yellow;
+}
+table td {
+  text-align:center;
+}
+
+table li {
+  font-family: Times New Roman;
+  list-style-type: square;
+  text-align:left;
+}
+a {
+  color: green;
+}
+
+.books {
+  font-family: Times New Roman;
+  color: red;
+}
+p {
+  font-family: Times New Roman;
+}

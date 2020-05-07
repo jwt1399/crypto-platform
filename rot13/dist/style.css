@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Petrona&display=swap");
+.tables-application {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  color: #111;
+  font-family: 'Petrona', serif;
+  background-color: #111;
+}
+.tables-application .textbox-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+.tables-application .textbox {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.tables-application .preToPost {
+  padding: 15px;
+  text-align: center;
+}
+.tables-application .preToPost__button {
+  padding: 5px 15px;
+  background: #fff;
+  cursor: pointer;
+}
+.tables-application .tables-title {
+  font-size: 32px;
+  text-align: center;
+  margin: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tables-application .tables-title--sub {
+  font-size: 15px;
+}
+.tables-application .tables-description {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px;
+  color: #fff;
+}
+.tables-application .tables__table {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin: 10px 0;
+  max-width: 800px;
+}
+.tables-application .tables__table__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  padding: 20px;
+  position: relative;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+}
+.tables-application .tables__table__item--title {
+  background-color: #999;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tables-application .tables__table__item--pre:after {
+  content: "→";
+  position: absolute;
+  right: -18px;
+  font-size: 22px;
+  z-index: 1;
+  box-shadow: 0 0 20px 20px white inset;
+}

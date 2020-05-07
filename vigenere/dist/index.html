@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vigenere密码</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h5>如果有兴趣，我建议阅读<a href="https://zh.wikipedia.org/zh-hans/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81">wiki文章</a> 以获得更深入的知识！ </h5>
+<div class="container">
+<main class="vigenere__wrapper" id="vigenere">
+   
+   <h1 class="vigenere__title">
+      Vigenere加密
+   </h1>
+   
+   <div class="vigenere__modes">
+      <div class="vigenere__radio">
+         <input type="radio" id="encrypt" value="true" v-model="is_encrypting">
+         <label for="encrypt">加密</label>
+      </div>
+
+      <div class="vigenere__radio">
+         <input type="radio" id="decrypt" value="false" v-model="is_encrypting">
+         <label for="decrypt">解密</label>
+      </div>
+   </div>
+   
+   <textarea class="vigenere__input" rows="5" v-model="message"></textarea>
+   
+   <div class="vigenere__key">
+      密钥: <input type="text" v-model="key">
+   </div>
+   
+   <div class="vigenere__message">
+      <h3 class="vigenere__message-banner">
+         你的 
+         <span v-if=current_mode>加密</span>
+         <span v-else>解密</span> 信息
+      </h3>
+      
+      <p>
+         {{encrypted_message}}
+      </p>
+   </div>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

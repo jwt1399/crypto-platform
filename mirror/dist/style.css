@@ -1,0 +1,62 @@
+html, body {
+  font-family: Monospace;
+}
+
+.container {
+  width: 50%;
+  min-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+}
+.container #input {
+  width: 50%;
+  text-align: center;
+}
+.container #process {
+  background: transparent;
+  border: 1px solid gray;
+}
+.container #output i {
+  color: lightgray;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr {
+  height: 30px;
+  border: 1px solid gray;
+}
+tr td {
+  width: 30px;
+  border: 1px solid gray;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr:nth-child(1) {
+  background-color: lightgray;
+}
+
+tr:last-of-type {
+  background-color: lightgray;
+}
+
+tr td:nth-child(1) {
+  background-color: lightgray;
+}
+
+tr td:last-of-type {
+  background-color: lightgray;
+}
+
+#how {
+  border-top: 1px dashed black;
+  margin: 30px 0;
+}
+#how p {
+  margin-bottom: 1em;
+}

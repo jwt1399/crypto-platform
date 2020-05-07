@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Morse Code</title>
+  <!-- layui -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+  <link rel="stylesheet" href="./layuistyle.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<!-- morse telegraph -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:500' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+  <link rel="stylesheet" href="./morse telegraph.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#home">摩斯介绍</a></li>
+  <li><a href="#profile">摩斯电报机</a></li>
+  <li><a href="#messages">摩斯音频表</a></li>
+  <li><a href="#settings"  target="_blank">摩斯翻译器</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+  	<div class="container">
+			
+</div>
+<!-- morse telegraph -->
+  <div class="tab-pane" id="profile">
+  
+  <div class="telegraph animated fadeInDown">
+  <div class="telegraph__tapper" title="Tap me!"></div>
+</div>
+<div class="headline">
+  <h1>
+    摩尔斯电报机
+  </h1>
+  <h2>
+   
+  </h2>
+  <h4>
+    敲击敲击器（或按空格键），然后开始发出滴滴声！
+  </h4>
+</div>
+<div class="morse-code-output"></div>
+<!-- morse telegraph partial -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="./morse telegraph.js"></script>
+
+  </div>
+  
+
+<div class="tab-pane" id="messages">
+
+
+</div>
+
+<!-- morse-code-converter -->
+  <div class="tab-pane" id="settings">
+  
+<div class="panels">
+  <div class="panel">
+    <h3>Morse Code converter</h3>
+    <h1>摩斯密码翻译器</h1>
+    <textarea id="input" rows="4" placeholder="输入英文字符"></textarea>
+    <div class="symbol">
+      <div class="symbolText">⥮ </div>
+    </div>
+    <textarea id="output" rows="4" placeholder="输入摩斯码"></textarea>
+    <div class="playList"></div>
+    <div class="buttons">
+      <button id="btnMorse">转成摩斯码</button>
+      <button id="btnEng">转成英文</button>
+      <button id="btnPlay">► 播放声音</button>
+    </div>
+    <audio class="short" src="http://2017.awiclass.monoame.com/audio/morse/short.mp3"></audio>
+    <audio class="long" src="http://2017.awiclass.monoame.com/audio/morse/long.mp3"></audio>
+  </div>
+  <div class="panel right">
+    <h3>摩斯密码速查表</h3>
+    <hr/>
+    <ul class="codelist"></ul>
+  </div>
+</div>
+<div class="decoration">Morse Code</div>
+<!-- morse-code-converter partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.min.js'></script>
+<script  src="./morse-code-converter.js"></script>
+  </div>
+  
+</div>
+
+<!-- partial -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js'></script>
+<script  src="./layuiscript.js"></script>
+
+</body>
+</html>

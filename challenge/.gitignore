@@ -1,0 +1,17 @@
+.idea/
+UI/css/bootstrap.css
+UI/css/bootstrap-grid.css
+UI/css/bootstrap-reboot.css
+UI/js/bootstrap.bundle.js
+UI/js/bootstrap.js
+UI/js/jquery.js
+UI/js/Chart.js
+*.pyc
+
+\.gitignore\.swp
+
+\.DS_Store
+
+Backend/venv/
+Backend/config/database.py
+requirenments.txt

@@ -1,0 +1,86 @@
+/* This css is kinda messy, bwahaha*/
+body {
+  background: #ccc;
+  font-family: 'Open Sans';
+}
+
+hr {
+  background: none;
+  border: 0;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #fff;
+}
+
+.charHolder {
+  font-size: 1em;
+  padding: 5px;
+  width: 30px;
+  border-radius: 6px;
+  text-align: center;
+  height: auto;
+  margin: 3px;
+  display: inline-block;
+  box-shadow: 5px 8px 10px #777;
+  background: #eee; 
+  border: 2px solid #eee;
+}
+
+.charWrapper {
+  padding: 10px;
+}
+
+#inputOne {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  font-family: consolas;
+  border: 0;
+  margin: 10px auto;
+  font-size: 2em;
+  display: block;
+}
+
+#outputChar[readonly], #outputNumb[readonly] {
+  text-align: center;
+}
+
+#split {
+  font-size: 2em;
+  font-family: consolas;
+}
+
+#splittedChar {
+  text-align: center;
+  padding: 10px;
+}
+
+.list {
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 5px #999;
+  margin:3px 0;
+}
+
+.dim {
+  opacity: .3;
+  box-shadow: 0 0 0 #777;
+}
+
+/*um, pink isn't #999, it was actually pink, just so it blends with everything, I changed that*/
+.pink {
+  background: #999;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px #777;
+  opacity: 1;
+}
+.pink > hr {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #aaa;
+}
+
+.pink > span {
+  color: white;
+}

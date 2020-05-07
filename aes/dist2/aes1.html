@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+     *{
+         margin: 0px;
+        padding: 0px;
+     background-color: darkgray;
+     }
+  .t{
+      font-size:45px;
+      position: absolute;
+      top:10px;
+      color: white;
+      left: 45%;
+  }
+  .s{
+  ; font-size:25px;
+      position: absolute;
+      z-index: 1000;
+      top:200px;
+      color: white;
+      left:22%;
+  }
+     .c{
+     ; font-size:25px;
+         position: absolute;
+         z-index:2000;
+         top:200px;
+         color: white;
+         left:70%;
+     }
+    .gs{
+        font-size: 30px;
+        position: absolute;
+        z-index: 1500;
+        top:500px;
+        left: 65%;
+        color: white;
+        display: block;
+        display: none;
+    }
+        .jt1{
+            background: url("img/jt.png");
+            position: absolute;
+            top:420px;
+            left: 17%;
+            width: 200px;
+            height: 200px;
+            z-index: 3200;
+            display:none;
+        }
+        .jt2{
+            background-image: url("img/jt.png");
+            position: absolute;
+            top:420px;
+            left:68%;
+            z-index: -500;
+            display: block;
+            width: 200px;
+            height: 200px;
+            display:none;
+        }
+        .te{
+         position: absolute;
+            z-index: 4000;
+            left:17%;
+            top: 580px;
+            width: 200px;
+            height:140px;
+			color: white;
+			display: none;
+			font-size: 20px;
+        }
+	   .tk{
+		   position: absolute;
+		   z-index: 4000;
+		   left:68%;
+		   top: 580px;
+		   width: 200px;
+		   height:140px;
+		   display: none;
+		   color: white;
+		   font-size:20px;
+		}
+
+    </style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var time = 5;
+			// var secondEle = document.getElementById("second");
+			var timer = setInterval(function(){
+				// secondEle.innerHTML = time;
+				time--;
+				if(time==0){
+					clearInterval(timer);
+					location.href="aes2.html";
+				}
+					
+			},1000);
+		}
+	</script>
+</head>
+<body>
+<div class="t">Input</div>
+<div class="s">State</div>
+<div class="c">Cipher Key</div>
+<table style="width:300px;height: 180px; background-color:red; position: absolute; left:220px;top: 250px ">
+    <tr>
+        <td><div id="d1" style="display: block;text-align: center;font-size: 20px">32</div> </td>
+        <td><div id="d5" style="display: block;text-align: center;font-size: 20px;color:darkgray">88</div></td>
+        <td><div id="d9" style="display: block;text-align: center;font-size: 20px;color:darkgray">31</div></td>
+        <td><div id="d13" style="display: block;text-align: center;font-size: 20px;color:darkgray">e0</div></td>
+    </tr>
+    <tr>
+        <td><div id="d2" style="display: block;text-align: center;font-size: 20px">43</div></td>
+        <td><div id="d6" style="display: block;text-align: center;font-size: 20px;color:darkgray">5a</div></td>
+        <td><div id="d10" style="display: block;text-align: center;font-size: 20px;color:darkgray">31</div></td>
+        <td><div id="d14" style="display: block;text-align: center;font-size: 20px;color:darkgray">37</div></td>
+    </tr>
+    <tr>
+        <td><div id="d3" style="display: block;text-align: center;font-size: 20px">f6</div></td>
+        <td><div id="d7" style="display: block;text-align: center;font-size: 20px;color:darkgray">30</div></td>
+        <td><div id="d11" style="display: block;text-align: center;font-size: 20px;color:darkgray">98</div></td>
+        <td><div id="d15" style="display: block;text-align: center;font-size: 20px;color:darkgray">07</div></td>
+    </tr>
+    <tr>
+        <td><div id="d4" style="display: block;text-align: center;font-size: 20px">a8</div></td>
+        <td><div id="d8" style="display: block;text-align: center;font-size: 20px;color:darkgray">8d</div></td>
+        <td><div id="d12" style="display: block;text-align: center;font-size: 20px;color:darkgray">a2</div></td>
+        <td><div id="d16" style="display: block;text-align: center;font-size: 20px;color:darkgray">34</div></td>
+    </tr>
+</table>
+
+<table style="width:300px;height: 180px; background-color:red; position: absolute; left:1000px;top: 250px ">
+    <tr>
+        <td><div id="b1" style="display: block;text-align: center;font-size: 20px">2b</div> </td>
+        <td><div id="b5" style="display: block;text-align: center;font-size: 20px;color:darkgray">28</div></td>
+        <td><div id="b9" style="display: block;text-align: center;font-size: 20px;color:darkgray">ab</div></td>
+        <td><div id="b13" style="display: block;text-align: center;font-size: 20px;color:darkgray">09</div></td>
+    </tr>
+    <tr>
+        <td><div id="b2" style="display: block;text-align: center;font-size: 20px">7e</div></td>
+        <td><div id="b6" style="display: block;text-align: center;font-size: 20px;color:darkgray">ae</div></td>
+        <td><div id="b10" style="display: block;text-align: center;font-size: 20px;color:darkgray">f7</div></td>
+        <td><div id="b14" style="display: block;text-align: center;font-size: 20px;color:darkgray">cf</div></td>
+    </tr>
+    <tr>
+        <td><div id="b3" style="display: block;text-align: center;font-size: 20px">15</div></td>
+        <td><div id="b7" style="display: block;text-align: center;font-size: 20px;color:darkgray">d2</div></td>
+        <td><div id="b11" style="display: block;text-align: center;font-size: 20px;color:darkgray">15</div></td>
+        <td><div id="b15" style="display: block;text-align: center;font-size: 20px;color:darkgray">4f</div></td>
+    </tr>
+    <tr>
+        <td><div id="b4" style="display: block;text-align: center;font-size: 20px">16</div></td>
+        <td><div id="b8" style="display: block;text-align: center;font-size: 20px;color:darkgray">a6</div></td>
+        <td><div id="b12" style="display: block;text-align: center;font-size: 20px;color:darkgray">88</div></td>
+        <td><div id="b16" style="display: block;text-align: center;font-size: 20px;color:darkgray">3c</div></td>
+    </tr>
+</table>
+<div class="jt1" id="jt1"></div>
+<div class="jt2" id="jt2"></div>
+<div class="te" id="te">
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to</p><br>
+   <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Encryption</p><br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process</p>
+</div>
+
+<div class="tk" id="tk">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to</p><br>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key</p><br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schedule</p>
+</div>
+<div class="gs" id="gs">
+<p>hexadecimal notation:</p><br>
+<p>Ex:32 =00110010(1 byte)</p>
+</div>
+
+<script>
+    var i=5;
+    var a=5;
+    var g=1;
+    var j=1;
+    var t=1;
+    var gs=document.getElementById("gs");
+   var te=document.getElementById("te");
+    var tk=document.getElementById("tk");
+    var jt1=document.getElementById("jt1");
+    var jt2=document.getElementById("jt2");
+    var time1=setInterval(function(){
+          document.getElementById("d"+i).style.color="black";
+          i++;
+		   if(i>5){
+			   return false;
+		   }
+       },200)
+
+    var time2=setInterval(function(){
+        document.getElementById("b"+a).style.color="black";
+       a++;
+        if(a>16){
+            return false;
+        }
+    },200)
+
+    var time3=setInterval(function(){
+        g++;
+        if(g==17){
+            gs.style.display="block";
+        }
+        if(g>20){
+            gs.style.display="none";
+        }
+    },200)
+
+    var time4=setInterval(function(){
+       j++;
+        if(j>21){
+            jt1.style.display="block";
+            jt2.style.display="block";
+        }
+    },200)
+
+    var time5=setInterval(function(){
+        t++;
+        if(t>24){
+            te.style.display="block";
+            tk.style.display="block";
+        }
+    },200)
+
+</script>
+
+</body>
+</html>

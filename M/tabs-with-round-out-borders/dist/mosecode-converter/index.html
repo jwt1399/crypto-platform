@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Morse code converter 摩斯密码翻译器</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div class="panels">
+  <div class="panel">
+    <h3>Morse Code converter</h3>
+    <h1>摩斯密码翻译器</h1>
+    <textarea id="input" rows="4" placeholder="输入英文字符"></textarea>
+    <div class="symbol">
+      <div class="symbolText">⥮ </div>
+    </div>
+    <textarea id="output" rows="4" placeholder="输入摩斯码"></textarea>
+    <div class="playList"></div>
+    <div class="buttons">
+      <button id="btnMorse">转成摩斯码</button>
+      <button id="btnEng">转成英文</button>
+      <button id="btnPlay">► 播放声音</button>
+    </div>
+    <audio class="short" src="http://2017.awiclass.monoame.com/audio/morse/short.mp3"></audio>
+    <audio class="long" src="http://2017.awiclass.monoame.com/audio/morse/long.mp3"></audio>
+  </div>
+  <div class="panel right">
+    <h3>摩斯密码速查表</h3>
+    <hr/>
+    <ul class="codelist"></ul>
+  </div>
+</div>
+<div class="decoration">Morse Code</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
