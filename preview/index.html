@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>密码学课堂 | Unity预览</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="icon" type="image/png" href="../img/logo.png">
+		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kOE+STGAkgemIkUbGtoZ8dJLqfvJ/xzRnimSkQN7viOfwRvWseF7lqcuNXmjwrL"
+		 crossorigin="anonymous">
+		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/custom.min.css">
+		<script id="twitter-wjs" src="../js/widgets.js"></script>
+		<script type="text/javascript" async="" src="../js/ga.js"></script>
+		<link rel="stylesheet" href="css/danmuplayer.css">
+		<script src="js/lib/jquery-1.11.1.min.js"></script>
+		<script src="js/danmuplayer.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/swiper.css" />
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body id="home">
+		<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+			<div class="container">
+				<a href="http://crypto.jwt1399.top/" class="navbar-brand">
+					<img src="../img/logo.png" style="width:25px;height:25px;">Cryptography class</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				 aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" id="themes">古典&现代
+								<span class="caret"></span></a>
+							<div class="dropdown-menu" aria-labelledby="themes">
+								<a class="dropdown-item" href="../jian-crypto/dist/index.html">密码学简介</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="../rot13/dist/index.html">Substitution Cipher</a>
+								<a class="dropdown-item" href="../mirror/dist/index.html">Image password</a>
+								<a class="dropdown-item" href="../caesar/dist/index.html">Caesar Cipher</a>
+								<a class="dropdown-item" href="../vigenere/dist/index.html">Vigenere</a>
+								<a class="dropdown-item" href="../morse/index.html">Morse code</a>
+								<a class="dropdown-item" href="../ascii/dist/index.html">ASCII</a>
+								<a class="dropdown-item" href="">DES</a>
+								<a class="dropdown-item" href="../rsa/index.html">RSA</a>
+								<a class="dropdown-item" href="">ECC</a>
+								<a class="dropdown-item" href="">SHA1</a>
+								<a class="dropdown-item" href="">3DES</a>
+								<a class="dropdown-item" href="../aes/dist/index.html">AES</a>
+								<a class="dropdown-item" href="">SHA3</a>
+								<a class="dropdown-item" href="">SM4</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../challenge/UI/index.html">挑战</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">帮助</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">关于</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://jwt1399.top/">博客</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="splash" style="padding: 100px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h1>Unity 3d cryptographic games</h1>
+						<div id="danmup" class="preview" align="center" style="padding: 0px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+			$("#danmup").danmuplayer({
+		  src:"unity.mp4",       //视频源
+		  width:800,			//视频宽度
+		  height:445,           //视频高度
+		});
+		</script>
+
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			p {
+				text-align: center;
+			}
+
+			img {
+				width: 43.75rem;
+				height: 18.125rem;
+			}
+
+			.swiper-container {
+				width: 43.75rem;
+				height: 18.125rem;
+				margin: 0 auto;
+			}
+
+			.swiper-button-next {
+				right: 20px;
+				left: auto;
+			}
+
+			.swiper-button-prev {
+				left: 20px;
+				right: auto;
+			}
+
+			/* css定义分页，导航按钮颜色 */
+			#case5 {
+				--swiper-theme-color: #ff6600;
+				--swiper-pagination-color: #00ff33;
+				/* 两种都可以 */
+			}
+
+			#case6 img,
+			#case7 img {
+				transform: scale(0.7);
+			}
+
+			#case7 {
+				width: auto;
+			}
+		</style>
+
+
+
+		<h3 align="center">Game interface display</h3>
+		<div class="swiper-container" id="case7">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/t1.png"></div>
+				<div class="swiper-slide"><img src="img/t2.png"></div>
+				<div class="swiper-slide"><img src="img/t4.png"></div>
+			</div>
+			<!-- 导航按钮 上一页下一页 -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<!-- 分页器 -->
+			<div class="swiper-pagination"></div>
+			<!-- 滚动条 -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+		<h3 align="center">Game interface display</h3>
+		<div class="swiper-container" id="case6">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/t1.png"></div>
+				<div class="swiper-slide"><img src="img/t2.png"></div>
+				<div class="swiper-slide"><img src="img/t3.png"></div>
+				<div class="swiper-slide"><img src="img/t4.png"></div>
+				<div class="swiper-slide"><img src="img/t5.png"></div>
+			</div>
+			<!-- 导航按钮 上一页下一页 -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<!-- 分页器 -->
+			<div class="swiper-pagination"></div>
+			<!-- 滚动条 -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+</div>
+
+		<script type="text/javascript">
+			/* 立方轮播 */
+			var mySwiper = new Swiper('#case6', {
+				keyboard: true, //启用键盘左右切换
+				loop: true, //允许从第一张到最后一张，或者从最后一张到第一张  循环属性
+				parallax: true, //视差位移动画
+				effect: 'cube', //轮播效果，cube立方轮播
+				autoplay: true, //可选选项，自动滑动
+				initialSlide: 0, //默认显示第二张图片索引从0开始
+				speed: 3000, //设置过度时间
+				/* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+				autoplay: {
+					delay: 3000
+				},
+				/*  设置每隔3000毫秒切换 */
+				<!-- 分页器 -->
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					/* 可点击切换 */
+					dynamicBullets: true,
+					/* 动力球样式 */
+				},
+				<!-- 导航按钮 上一页下一页 -->
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+					hideOnClick: true,
+				},
+				<!-- 滚动条 -->
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					hide: true,
+				},
+				/*  设置当鼠标移入图片时是否停止轮播*/
+				autoplay: {
+					disableOnInteraction: false,
+				},
+				/* 立方轮播属性 */
+				cubeEffect: {
+					slideShadows: true,
+					shadow: true,
+					shadowOffset: 100,
+					shadowScale: 0.6
+				},
+			});
+			/* 覆盖流3d切换 */
+			var mySwiper = new Swiper('#case7', {
+				loop: true, //允许从第一张到最后一张，或者从最后一张到第一张  循环属性
+				effect: 'coverflow', //轮播效果，coverflow覆盖流效果
+				slidesPerView: 2,
+				centeredSlides: true,
+				autoplay: true, //可选选项，自动滑动
+				initialSlide: 1, //默认显示第二张图片索引从0开始
+				speed: 3000, //设置过度时间
+				/* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+				autoplay: {
+					delay: 3000
+				},
+				/*  设置每隔3000毫秒切换 */
+				<!-- 分页器 -->
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					/* 可点击切换 */
+					dynamicBullets: true,
+					/* 动力球样式 */
+				},
+				<!-- 导航按钮 上一页下一页 -->
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				<!-- 滚动条 -->
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					hide: true,
+				},
+				/*  设置当鼠标移入图片时是否停止轮播*/
+				autoplay: {
+					disableOnInteraction: false,
+				},
+				coverflowEffect: {
+					rotate: 30,
+					stretch: 10,
+					depth: 60,
+					modifier: 2,
+					slideShadows: true
+				},
+			});
+		</script>
+
+
+    <div class="container">
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <h4 class="float-lg-right"><a href="#top">Back to top</a></h4>
+            </ul>
+			<h4 align="center">Copyright&nbsp;&copy;<span id="year">2020</span>
+			<a href="https://jwt1399.top" target="_blank">简简</a>&nbsp;|&nbsp;Powered by&nbsp;
+			<a href="https://docs.djangoproject.com/zh-hans/3.0/intro/" target="_blank">Django</a>&nbsp;|&nbsp;Theme&nbsp;
+			<a href="https://www.bootcss.com/" target="_blank">Bootstrap</a>&nbsp;</h4>
+			<br>
+			<h4 align="center">
+				<a href="http://www.beian.miit.gov.cn/" target="_blank">蜀ICP备19020450号</a>
+			</h4>	         		  
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+
+		<script src="../js/popper.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/custom.js"></script>
+	</body>
+
+</html>
